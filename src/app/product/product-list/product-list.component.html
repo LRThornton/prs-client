@@ -21,7 +21,7 @@
     <tbody>
         <tr *ngFor="let p of products">
             <td>{{ p.id }}</td>
-            <td>{{ p.vendorId }}</td>
+            <td>{{ p.vendor.name }}</td>
             <td>{{ p.partNbr }}</td>
             <td>{{ p.name}}</td>
             <td>{{ p.price | currency }}</td>

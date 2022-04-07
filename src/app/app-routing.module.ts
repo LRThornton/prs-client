@@ -11,10 +11,14 @@ import { UserCreateComponent } from './user/user-create/user-create.component';
 import { UserDetailComponent } from './user/user-detail/user-detail.component';
 import { UserEditComponent } from './user/user-edit/user-edit.component';
 import { UserListComponent } from './user/user-list/user-list.component';
+import { UserLoginComponent } from './user/user-login/user-login.component';
 import { VendorCreateComponent } from './vendor/vendor-create/vendor-create.component';
 import { VendorDetailComponent } from './vendor/vendor-detail/vendor-detail.component';
 import { VendorEditComponent } from './vendor/vendor-edit/vendor-edit.component';
 import { VendorListComponent } from './vendor/vendor-list/vendor-list.component';
+
+
+
 
 const routes: Routes = [
 
@@ -36,6 +40,9 @@ const routes: Routes = [
   { path: "product/create", component: ProductCreateComponent},
   { path: "product/detail/:id", component: ProductDetailComponent},
   { path: "product/edit/:id", component: ProductEditComponent},
+
+  { path: "login", component: UserLoginComponent},
+  
   
 
   

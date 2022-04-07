@@ -23,7 +23,7 @@ import { ProductEditComponent } from './product/product-edit/product-edit.compon
 import { ProductDetailComponent } from './product/product-detail/product-detail.component';
 import { ProductCreateComponent } from './product/product-create/product-create.component';
 import { UserLoginComponent } from './user/user-login/user-login.component';
-import { UserLoginPipe } from './user/user-login.pipe';
+
 
 
 @NgModule({
@@ -46,7 +46,7 @@ import { UserLoginPipe } from './user/user-login.pipe';
     ProductDetailComponent,
     ProductCreateComponent,
     UserLoginComponent,
-    UserLoginPipe,
+   
   
   ],
   imports: [

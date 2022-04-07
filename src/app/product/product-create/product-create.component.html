@@ -1,1 +1,42 @@
-<p>product-create works!</p>
+<app-menu></app-menu>
+<div>
+    <span id="pageTitle">Create Product</span>
+</div>
+<table *ngIf="product" class="table table-sm">
+    <tbody>
+    <tr>
+        <th>Id:</th>  
+        <td><input [(ngModel)]="product.id" type="number" readonly></td>
+    </tr>
+    <tr>
+        <th>Vendor:</th>  
+        <td><input [(ngModel)]="product.vendor.name" type="number" readonly></td>
+    </tr>    
+    <tr>
+        <th>PartNbr:</th>  
+        <td><input [(ngModel)]="product.partNbr" type="text"></td>
+    </tr>    
+    <tr>
+        <th>Description:</th>  
+        <td><input [(ngModel)]="product.name" type="text"></td>
+    </tr>
+    <tr>
+        <th>Price:</th>  
+        <td><input [(ngModel)]="product.price" type="text"></td>
+    </tr>
+    <tr>
+        <th>Unit</th>  
+        <td><input [(ngModel)]="product.unit" type="text"></td>
+    </tr>
+    <tr>
+        <th>Photo</th>  
+        <td><input [(ngModel)]="product.photopath" type="text"></td>
+    </tr>     
+    <tr>
+    </tbody>
+</table>
+<div>   
+    <button (click)="save()" class="btn btn-primary">Save</button>  
+</div>
+
+
