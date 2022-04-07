@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SystemService } from 'src/app/core/system.service';
 import { UserService } from '../user.service';
 
 @Component({
@@ -12,11 +13,12 @@ export class UserLoginComponent implements OnInit {
   login: string = "";
   password: string = "";
   constructor(
-    private usersvc: UserService
+    
+    private syssvc: SystemService
   ) { }
 
   submit(): void{
-    this.usersvc.login(this.login, this.password).subscribe({
+  this.syssvc.login(this.login, this.password).subscribe({
     next: (res) => {
       console.log("Login successful");
     },
@@ -30,3 +32,4 @@ export class UserLoginComponent implements OnInit {
   }
 
 }
+

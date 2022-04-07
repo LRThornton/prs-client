@@ -1,6 +1,6 @@
 <app-menu></app-menu>
 <div>
-    <span id="pageTitle">Edit Product</span>
+    <span id="pageTitle">Product Detail</span>
 </div>
 <table *ngIf="product" class="table table-sm">
     <tbody>
@@ -10,7 +10,7 @@
     </tr>
     <tr>
         <th>Vendor:</th>  
-        <td><input [(ngModel)]="product.vendor.name" type="number" readonly></td>
+        <td><input [(ngModel)]="product.vendorId" type="number" readonly></td>
     </tr>    
     <tr>
         <th>PartNbr:</th>  
@@ -33,6 +33,13 @@
         <td><input [(ngModel)]="product.photopath" type="text" readonly></td>
     </tr>     
     <tr>
+        <div>
+            <button (click)="remove()" class="btn btn-danger">Delete</button>
+            <span *ngIf="showVerifyButton">
+               | <button (click)="verifyRemove()" class="btn btn-danger">Verify Delete</button>
+            </span>
+        
+        </div>
     </tbody>
 </table>
 

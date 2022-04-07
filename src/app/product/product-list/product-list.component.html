@@ -2,7 +2,7 @@
 <div>
     <span id="pageTitle">Product List</span>  |
     <a routerLink="/product/create">New</a>  |
-    <input [(ngModel)]="searchCriteria" type="text" placeholder="Search">
+    
     
 </div>
 <table class="table table-sm">
@@ -21,14 +21,16 @@
     <tbody>
         <tr *ngFor="let p of products">
             <td>{{ p.id }}</td>
-            <td>{{ p.vendor.name }}</td>
+            <td>{{ p.vendorId }}</td>
             <td>{{ p.partNbr }}</td>
             <td>{{ p.name}}</td>
             <td>{{ p.price | currency }}</td>
             <td>{{ p.unit }}</td>        
                  
             <td>
-                <a routerLink="/product/detail/{{ p.id }}">Detail</a> 
+                <a routerLink="/product/detail/{{ p.id }}">Detail</a> |
+                <a routerLink="/product/edit/{{ p.id }}">Edit</a>
+                      
                
             </td>
         </tr>
