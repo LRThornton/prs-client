@@ -3,10 +3,11 @@ import { Product } from '../product.class';
 import { ProductService } from '../product.service';
 
 @Component({
-  selector: 'app-product-list',
+  selector: 'app-list-detail',
   templateUrl: './product-list.component.html',
   styleUrls: ['./product-list.component.css']
 })
+
 export class ProductListComponent implements OnInit {
 
   products: Product[] = [];

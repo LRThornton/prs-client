@@ -3,7 +3,8 @@
     <span id="pageTitle">User Detail</span>
 </div>
 <table *ngIf="user" class="table table-sm">
-    <tr>
+    <tbody>
+        <tr>
         <th>Id:</th>  
         <td><input [(ngModel)]="user.id" type="number" readonly></td>
     </tr>
@@ -40,6 +41,7 @@
         <td><input [(ngModel)]="user.isadmin" type="checkbox" disabled></td>
     </tr>
     <tr>
+        </tbody>
 </table>
 <div>
     <button (click)="remove()" class="btn btn-danger">Delete</button>

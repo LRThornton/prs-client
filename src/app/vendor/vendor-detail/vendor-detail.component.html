@@ -3,6 +3,7 @@
     <span id="pageTitle">Vendor Detail</span>
 </div>
 <table *ngIf="vendor" class="table table-sm">
+    <tbody>
     <tr>
         <th>Id:</th>  
         <td><input [(ngModel)]="vendor.id" type="number" readonly></td>
@@ -40,6 +41,7 @@
         <td><input [(ngModel)]="vendor.email" type="text" readonly></td>
     </tr>
     <tr>
+    </tbody>
 </table>
 <div>
     <button (click)="remove()" class="btn btn-danger">Delete</button>
