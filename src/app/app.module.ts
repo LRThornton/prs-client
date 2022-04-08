@@ -23,6 +23,8 @@ import { ProductEditComponent } from './product/product-edit/product-edit.compon
 import { ProductDetailComponent } from './product/product-detail/product-detail.component';
 import { ProductCreateComponent } from './product/product-create/product-create.component';
 import { UserLoginComponent } from './user/user-login/user-login.component';
+import { RequestComponent } from './request/request.component';
+import { RequestlineComponent } from './requestline/requestline.component';
 
 
 
@@ -46,6 +48,8 @@ import { UserLoginComponent } from './user/user-login/user-login.component';
     ProductDetailComponent,
     ProductCreateComponent,
     UserLoginComponent,
+    RequestComponent,
+    RequestlineComponent,
    
   
   ],

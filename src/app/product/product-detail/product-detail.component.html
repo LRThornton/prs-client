@@ -22,7 +22,7 @@
     </tr>
     <tr>
         <th>Price:</th>  
-        <td><input [(ngModel)]="product.price" type="text" readonly></td>
+        <td><input [ngModel]="product.price | currency" type="text" readonly></td>
     </tr>
     <tr>
         <th>Unit</th>  

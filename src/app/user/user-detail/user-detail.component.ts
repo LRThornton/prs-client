@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { SystemService } from 'src/app/core/system.service';
 import { User } from '../user.class';
 import { UserService } from '../user.service';
 
@@ -14,7 +15,7 @@ export class UserDetailComponent implements OnInit {
   showVerifyButton: boolean = false;
 
   constructor(
-    private usersvc: UserService,
+    private usersvc: UserService,  
     private route: ActivatedRoute,
     private router: Router
   ) { }

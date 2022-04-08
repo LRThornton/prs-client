@@ -1,20 +1,32 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Router } from '@angular/router';
 import { User } from '../user/user.class';
+
+
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class SystemService {
 
-   
-  constructor(
-    private http: HttpClient
+  baseUrl:string="http://localhost:41589/api/users";
 
-  ) { }
-  login(login: string, password: string): Observable<User>{
-    return this.http.get(`http://localhost:47240/api/users/${login}/${password}`) as Observable<User>
-  }
+  user: any = null;
 
+  constructor(   
+    private router:Router
+
+    ) { }
+
+    
+    checkIfLoggedIn(): void{
+      if(this.user==null){
+        this.router.navigateByUrl('/login');
+      }
+    }
 }
+
+
+
+  

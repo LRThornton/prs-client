@@ -1,1 +1,31 @@
-<p>user-login works!</p>
+<div id="login-component">
+           <table class="table table-sm table-borderless">
+            <tr>
+                <th class="bigger50pct bold" colspan="2">Login</th>
+            </tr>
+            <tr><td>&nbsp;</td></tr>
+            <tr>
+                <td>User name:</td>
+                <td>
+                    <input [(ngModel)]="username" size=20 name="username" type="text" >
+                </td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td>
+                    <input [(ngModel)]="password" size=20 type="password" type="text">
+                </td>
+            </tr>  
+            <tr>
+                <td colspan="2">
+                    <span>{{message}}</span> 
+                </td>
+            </tr>
+            <tr>  
+                <td>
+                    <button (click) = "submit()">Login</button>
+                </td>              
+            </tr>        
+        </table>        
+      
+</div>

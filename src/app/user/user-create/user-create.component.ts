@@ -30,6 +30,14 @@ export class UserCreateComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.usersvc.list().subscribe({
+      next:(res)=>{
+        console.debug("Users",res);
+      },
+      error:(err)=>{
+        console.error(err);
+      }
+    })
   }
 
 }
