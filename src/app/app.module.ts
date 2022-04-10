@@ -23,8 +23,16 @@ import { ProductEditComponent } from './product/product-edit/product-edit.compon
 import { ProductDetailComponent } from './product/product-detail/product-detail.component';
 import { ProductCreateComponent } from './product/product-create/product-create.component';
 import { UserLoginComponent } from './user/user-login/user-login.component';
-import { RequestComponent } from './request/request.component';
-import { RequestlineComponent } from './requestline/requestline.component';
+import { RequestDetailComponent } from './request/request-detail/request-detail.component';
+import { RequestEditComponent } from './request/request-edit/request-edit.component';
+import { RequestListComponent } from './request/request-list/request-list.component';
+import { RequestCreateComponent } from './request/request-create/request-create.component';
+import { RequestLinesComponent } from './request/request-lines/request-lines.component';
+import { RequestReviewItemComponent } from './request/request-review-item/request-review-item.component';
+import { RequestReviewListComponent } from './request/request-review-list/request-review-list.component';
+import { RequestlineCreateComponent } from './requestline/requestline-create/requestline-create.component';
+import { RequestlineEditComponent } from './requestline/requestline-edit/requestline-edit.component';
+
 
 
 
@@ -48,9 +56,19 @@ import { RequestlineComponent } from './requestline/requestline.component';
     ProductDetailComponent,
     ProductCreateComponent,
     UserLoginComponent,
-    RequestComponent,
-    RequestlineComponent,
-   
+    RequestDetailComponent,
+    RequestEditComponent,
+    RequestListComponent,
+    RequestCreateComponent,
+    RequestLinesComponent,
+    RequestReviewItemComponent,
+    RequestReviewListComponent,
+    RequestlineCreateComponent,
+    RequestlineEditComponent,
+    
+
+
+  
   
   ],
   imports: [

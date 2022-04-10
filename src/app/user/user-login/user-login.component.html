@@ -1,15 +1,17 @@
-<div id="login-component">
+   <!--<div id="login-component">
            <table class="table table-sm table-borderless">
             <tr>
-                <th class="bigger50pct bold" colspan="2">Login</th>
+                <th class="bigger50pct bold" colspan="2">User Login</th>
             </tr>
             <tr><td>&nbsp;</td></tr>
             <tr>
-                <td>User name:</td>
+                <td>Username:</td>
                 <td>
                     <input [(ngModel)]="username" size=20 name="username" type="text" >
                 </td>
             </tr>
+            <hr>
+            <hr>
             <tr>
                 <td>Password:</td>
                 <td>
@@ -23,9 +25,24 @@
             </tr>
             <tr>  
                 <td>
-                    <button (click) = "submit()">Login</button>
+                    <button (click) = "submit()" class="btn btn-primary">Login</button>
                 </td>              
             </tr>        
         </table>        
       
+</div>-->
+<div style="text-align:center">
+    <span id="pageTitle">User Login</span>
+    <hr>
+    <div>
+        <label>Username:</label> &nbsp;
+        <input [(ngModel)]="username" type="text">
+    </div>
+    <hr>
+    <div>
+        <label>Password:</label> &nbsp;
+        <input [(ngModel)]="password" type="text">
+    </div>
+    <hr>
+    <button (click)="submit()">Login</button>
 </div>

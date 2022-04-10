@@ -3,13 +3,14 @@
     <span id="pageTitle">Edit Product</span>
 </div>
 <table *ngIf="product" class="table table-sm">
+    <tbody>
     <tr>
         <th>Id:</th>  
         <td><input [(ngModel)]="product.id" type="number" readonly></td>
     </tr>
     <tr>
         <th>Vendor:</th>  
-        <td><input [(ngModel)]="product.vendorId" type="number" readonly></td>
+        <td><input [(ngModel)]="product.vendor.name" type="text" readonly></td>
     </tr>    
     <tr>
         <th>PartNbr:</th>  
@@ -30,10 +31,10 @@
     <tr>
         <th>Photo</th>  
         <td><input [(ngModel)]="product.photopath" type="text"></td>
-    </tr>
-    
+    </tr>  
    
     <tr>
+    </tbody>
 </table>
 <div>   
     <button (click)="save()" class="btn btn-primary">Save</button>  
