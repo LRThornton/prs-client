@@ -12,8 +12,12 @@ import { Request } from '../request.class';
 export class RequestReviewListComponent implements OnInit {
 
   requests!: Request[];
+
+  
   sortColumn: string = "status";
   sortOrderAsc: boolean = true;
+  searchCriteria: string = "";
+
 
   constructor(
     private syssvc: SystemService,
@@ -24,12 +28,14 @@ export class RequestReviewListComponent implements OnInit {
 
   ngOnInit(): void {
     this.syssvc.chkLogin();
-    this.reqsvc.reviews(this.syssvc.user.id).subscribe({
-      next: (res) => {console.log (res) 
-      this.requests = res},
-      error: (err) => {console.error (err)}
-    })
+    let userId = this.syssvc.getLoggedInUser()!.id;
+    this.reqsvc.reviews(userId).subscribe({
+      next: (res) => {console.log (res);
+        console.debug(res);
+        this.requests = res;
+      },
+      error: (err) => console.error(err)
+    });
   }
 }
-
 

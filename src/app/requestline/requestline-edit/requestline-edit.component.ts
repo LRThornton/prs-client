@@ -15,7 +15,7 @@ export class RequestlineEditComponent implements OnInit {
 
   requestline!: Requestline;
   products!: Product[];
-  pageTitle: string = "Requestline Change"
+  
   
 
   constructor(
@@ -32,7 +32,7 @@ export class RequestlineEditComponent implements OnInit {
     this.reqlnsvc.change(this.requestline).subscribe({
       next: (res) => {
         console.debug("Requestline added");
-        this.router.navigateByUrl(`/requests/lines/${this.requestline.requestId}`);
+        this.router.navigateByUrl(`/request/lines/${this.requestline.requestId}`);
       },
       error: (err) => console.error(err)
     });
@@ -41,7 +41,7 @@ export class RequestlineEditComponent implements OnInit {
   ngOnInit(): void {
     this.prodsvc.list().subscribe({
       next: (res) => {
-        console.debug("Products:", res);
+       console.debug("Products:", res);
         this.products = res;
       },
       error: (err) => console.error(err)
