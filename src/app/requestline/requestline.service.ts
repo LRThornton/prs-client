@@ -8,15 +8,13 @@ import { Requestline } from './requestline.class';
 })
 export class RequestlineService {
 
-  baseUrl: string = "http://localhost:65298/api/requestlines";
+  baseUrl: string = "http://localhost:41589/api/requestlines";
 
   constructor(
     private http: HttpClient
   ) { }
 
-  list(): Observable<Requestline[]> {
-    return this.http.get(`${this.baseUrl}`) as Observable<Requestline[]>;
-  }
+ 
 
   get(id: number): Observable<Requestline> {
     return this.http.get(`${this.baseUrl}/${id}`) as Observable<Requestline>;

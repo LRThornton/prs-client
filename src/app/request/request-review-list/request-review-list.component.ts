@@ -11,9 +11,9 @@ import { Request } from '../request.class';
 })
 export class RequestReviewListComponent implements OnInit {
 
-  requests: Request[] = [];
-  request: Request = new Request();
-
+  requests!: Request[];
+  sortColumn: string = "status";
+  sortOrderAsc: boolean = true;
 
   constructor(
     private syssvc: SystemService,
@@ -23,16 +23,12 @@ export class RequestReviewListComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.request.userId = +this.syssvc.checkIfLoggedIn
-    this.reqsvc.reviews(this.request.userId).subscribe(
-      res => {
-        console.log(res);
-        this.requests = res as Request[];
-      },
-      err => {
-        console.error(err);
-      }
-    );
+    this.syssvc.chkLogin();
+    this.reqsvc.reviews(this.syssvc.user.id).subscribe({
+      next: (res) => {console.log (res) 
+      this.requests = res},
+      error: (err) => {console.error (err)}
+    })
   }
 }
 

@@ -1,11 +1,8 @@
 <app-menu></app-menu>
-<header></header>
-<div id="component">
-    <div id="heading">
-        <span id="pageTitle">{{ pageTitle }}</span>
-    </div>
-    <main>
-        <table class="table table-sm" *ngIf="requestline">
+    <div>
+        <span id=>Create Requestline</span>
+       </div>
+        <table class="table table-striped table-sm"*ngIf="requestline" >
             <tbody>
                 <tr>
                     <td>Id: </td>
@@ -28,5 +25,4 @@
         <div>
             <button (click)="save()" class="btn btn-primary">Save</button>
         </div>
-    </main>
-</div>
+    

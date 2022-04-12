@@ -10,23 +10,23 @@ import { User } from '../user/user.class';
 })
 export class SystemService {
 
-  baseUrl:string="http://localhost:41589/api/users";
+  user!: User;
+  
 
-  user: any = null;
+  constructor(
+    private router: Router
+  ) { }
 
-  constructor(   
-    private router:Router
+  getLoggedInUser(): User | null {
+    return this.user;
+  }
 
-    ) { }
 
-    
-    checkIfLoggedIn(): void{
-      if(this.user==null){
-        this.router.navigateByUrl('/login');
-      }
+  chkLogin(): void {
+    if(!this.user == null){
+      this.router.navigateByUrl("/login");
     }
+  }
 }
-
-
 
   

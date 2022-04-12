@@ -34,11 +34,7 @@
         </tr>
         <tr>
             <th>User:</th>
-            <td>
-                <select [(ngModel)]="request.userId">
-                    <option *ngFor="let u of users" value="{{ u.id }}">{{ u.username }}</option>
-                </select>
-            </td>
+            <td><input [(ngModel)]="request.user.username" type="text" disabled></td>
         </tr>
     </tbody>
 </table>

@@ -32,7 +32,7 @@ export class UserLoginComponent implements OnInit {
       },
       error: (err) => {
         if(err.status == 404){
-          this.message="Username/Password NOT found!"
+          this.message=("Username/Password NOT found!")
         }
         else{
           console.error("Login unsuccessful!"); 
