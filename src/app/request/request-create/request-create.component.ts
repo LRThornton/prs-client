@@ -19,14 +19,14 @@ export class RequestCreateComponent implements OnInit {
   constructor(
     private reqsvc: RequestService,
     private router: Router,
-    private systsvc: SystemService,
+    private sys: SystemService,
     private vndsvc: VendorService
   ) { }
 
  
 
 save(): void {
-  this.request.userId = this.systsvc.getLoggedInUser()!.id;
+  this.request.userId = this.sys.getLoggedInUser()!.id;
   this.reqsvc.create(this.request).subscribe({
     next: (res) => {
       console.debug("Request added");
@@ -37,7 +37,7 @@ save(): void {
 }
 
 ngOnInit(): void {
-  this.systsvc.chkLogin();
+  this.sys.chkLogin();
 }
 
 }

@@ -8,11 +8,7 @@
         <th>Id:</th>  
         <td><input [(ngModel)]="product.id" type="number" readonly></td>
     </tr>
-    <tr>
-        <th>Vendor:</th>  
-        <td><input [(ngModel)]="product.vendorName" type="text"></td>
-    </tr>    
-    <tr>
+      <tr>
         <th>PartNbr:</th>  
         <td><input [(ngModel)]="product.partNbr" type="text"></td>
     </tr>    
@@ -31,8 +27,16 @@
     <tr>
         <th>Photo</th>  
         <td><input [(ngModel)]="product.photopath" type="text"></td>
-    </tr>     
+    </tr>  
     <tr>
+        <th>Vendor:</th>  
+        <td>
+            <select [(ngModel)]="product.vendorId">
+                <option *ngFor="let v of vendors" value="{{ v.id }}">{{ v.name }}</option>
+            </select>            
+        </td>
+    </tr>       
+    
     </tbody>
 </table>
 <div>   
